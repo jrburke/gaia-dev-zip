@@ -84,17 +84,25 @@ the file to your desktop.
 
 3) Open the folder on your desktop that has the downloaded zip file.
 
+![show downloads](https://raw.github.com/jrburke/gaia-dev-zip/master/images/show-downloads.png)
+
 4) Double-click on the .zip file to unzip it. This should create a directory
 in your downloads folder.
+
+![unzipped dir](https://raw.github.com/jrburke/gaia-dev-zip/master/images/unzipped-dir.png)
 
 5) Open the **Firefox OS Simulator** in your desktop Firefox, found in the menu
 items at:
 
     Tools -> Web Developer -> Firefox OS Simulator
 
-6) In teh Simulator, click the **Add Directory** button, and find the folder
+
+
+6) In the Simulator, click the **Add Directory** button, and find the folder
 you unzipped in your downloads folder, and select the **manifest.webapp** file
 inside that folder.
+
+![fxos simulator](https://raw.github.com/jrburke/gaia-dev-zip/master/images/fxos-simulator.png)
 
 7) The Simulator will start running. You can either use it to validate the app,
 or you can just close it if you want to test on the device.
@@ -104,6 +112,8 @@ or you can just close it if you want to test on the device.
 
 9) In the Simulator tab, click the **Push** button to push the app to your
 phone.
+
+![push](https://raw.github.com/jrburke/gaia-dev-zip/master/images/push.png)
 
 10) Make sure the phone is on, and unlocked. It may tell you that:
 
