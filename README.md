@@ -80,7 +80,7 @@ Make sure that checkbox is checked.
 2) Use your **desktop Firefox** to navigate to the zip file. Choose to save
 the file to your desktop.
 
-![save zip]()
+![download zip](https://raw.github.com/jrburke/gaia-dev-zip/master/images/download-zip.png)
 
 3) Open the folder on your desktop that has the downloaded zip file.
 
