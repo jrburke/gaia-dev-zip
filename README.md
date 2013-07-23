@@ -45,14 +45,14 @@ The basic syntax for the tool:
 
 Where:
 
-* appname: the name of the app folder you want to zip up.
-* devname: the name to use for this snapshot. Best to use either the bugzilla
+* **appname**: the name of the app folder you want to zip up.
+* **devname**: the name to use for this snapshot. Best to use either the bugzilla
   bug ID or branch name.
 
 For example: a snapshot of the email app that changes the background of the
 app to red, and is tracked in bug 12345:
 
-  gaia-dev-zip email bug12345-redbg
+    gaia-dev-zip email bug12345-redbg
 
 When the tool is done, there will be a **bug12345-redbg.zip** folder in the
 apps directory. Upload this somewhere and give the UX person a link to that
@@ -60,9 +60,9 @@ zip file.
 
 ## For the UX person
 
-### Prequisites
+### Prerequisites
 
-1) Make sure in your desktop Firefox, you have installed the
+1) Make sure in your **desktop Firefox**, you have installed the
 [Firefox OS Simulator](https://addons.mozilla.org/en-us/firefox/addon/firefox-os-simulator/).
 It is a large install, may take a moment.
 
@@ -120,7 +120,7 @@ phone.
 
 ![push](https://raw.github.com/jrburke/gaia-dev-zip/master/images/push.png)
 
-10) Make sure the phone is on, and unlocked. It may tell you that:
+10) Make sure the phone is on, and unlocked. It may ask you:
 
     An incoming requets to permit remote debugging was detected.
     Allow connection?
