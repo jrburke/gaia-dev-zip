@@ -11,7 +11,12 @@ It works by copying the existing gaia app in your tree to a new name of your
 choosing, modifying the manifest.webapp to use the new name, and zipping up
 the contents.
 
-## Prerequisites
+If you are developer, see the **For the developer** section. If you are a
+UX person, see **For the UX person**.
+
+## For the developer
+
+### Prerequisites
 
 1) You need to be developing [Gaia](https://github.com/mozilla-b2g/gaia). If
 you do not have Gaia set up, then do not bother trying to use this tool.
@@ -22,7 +27,7 @@ easy to use installers for the major OS platforms.
 3) Have a usable `zip` implementaion on the command line. This tool uses
 the OS zip tool on the command line.
 
-## Installation
+### Installation
 
 Open a command line terminal window and type:
 
@@ -30,7 +35,7 @@ Open a command line terminal window and type:
 
 This only works after Node has been installed.
 
-## Creating a dev zip
+### Creating a dev zip
 
 Make sure you are in your local git clone of Gaia, in the **apps** directory.
 
@@ -53,7 +58,7 @@ When the tool is done, there will be a **bug12345-redbg.zip** folder in the
 apps directory. Upload this somewhere and give the UX person a link to that
 zip file.
 
-## UX workflow
+## For the UX person
 
 ### Prequisites
 
@@ -123,7 +128,7 @@ phone.
 Select OK. If you do not select OK in time, the Simulator tab will show a
 "timeout" error. If that happens, just try again.
 
-**Cleanup**:
+### Cleanup
 
 On phone:
 
