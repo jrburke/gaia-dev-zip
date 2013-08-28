@@ -11,20 +11,20 @@ var fs = require('fs'),
 colors.mode = 'console';
 
 function generateHelp() {
-  return 'Usage:\n'.bold + 'gaia-dev-zip appname devname\n' +
+  return 'Usage:\n'.bold + 'gaia-dev-zip path/to/application.zip devname\n' +
   'where:\n' +
-  '* appname is the directory name of the app in gaia/apps\n' +
+  '* path/to/application.zip is the path to the zip in profile/webapps\n' +
   '* devname is the dev-related name to use for the copy of the app. Suggested names are bug12394 or name of branch.\n' +
   'See README at http://github.com/jrburke/gaia-dev-zip for more info';
 }
 
 function main(args) {
   var d, tempDirName,
-      appName = args[0],
+      appPath = args[0],
       devName = args[1];
 
   // Validate args
-  if (!appName || !devName) {
+  if (!appPath || !devName) {
     d = q.defer();
     d.resolve(generateHelp());
     return d.promise;
@@ -38,7 +38,7 @@ function main(args) {
 
   return q.fcall(function () {
     var zipFileName, manifestPath, manifest, locales,
-        fullAppPath = path.join(cwd, appName);
+        fullAppPath = path.join(cwd, appPath);
 
     tempDirName = path.join(cwd, devName);
     zipFileName = tempDirName + '.zip';
@@ -46,15 +46,20 @@ function main(args) {
 
     try {
       if (!exists(fullAppPath)) {
-        throw new Error(path.join(cwd, appName) + ' does not exist.');
+        throw new Error(path.join(cwd, appPath) + ' does not exist.');
       }
 
-      // Copy app to new place.
-      sh.mkdir('-p', tempDirName);
-      sh.cp('-R', path.join(appName, '*'), tempDirName);
+      if (fs.statSync(fullAppPath).isDirectory()) {
+        // Copy app to new place.
+        sh.mkdir('-p', tempDirName);
+        sh.cp('-R', path.join(appPath, '*'), tempDirName);
+      } else if (path.extname(fullAppPath) === '.zip') {
+        sh.exec('unzip ' + fullAppPath + ' -d ' + tempDirName);
+      } else {
+        throw new Error(path.join(cwd, appPath) + ' is not a valid input.');
+      }
 
       // modify manifest to use new name
-
       manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
 
       // Update the name

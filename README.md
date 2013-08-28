@@ -7,9 +7,9 @@ a UX person for review.
 Probably only useful if you are fixing things for Gaia and want to share
 snapshots of that work with UX people for review.
 
-It works by copying the existing gaia app in your tree to a new name of your
-choosing, modifying the manifest.webapp to use the new name, and zipping up
-the contents.
+It works by copying the existing gaia app zip in your Gaia clone's
+`profile` directory to a new name of your choosing, modifying the
+manifest.webapp to use the new name, and zipping up the contents.
 
 If you are developer, see the **For the developer** section. If you are a
 UX person, see **For the UX person**.
@@ -37,25 +37,26 @@ This only works after Node has been installed.
 
 ### Creating a dev zip
 
-Make sure you are in your local git clone of Gaia, in the **apps** directory.
+Make sure you are in your local git clone of Gaia..
 
 The basic syntax for the tool:
 
-    gaia-dev-zip appname devname
+    gaia-dev-zip path/to/application.zip devname
 
 Where:
 
-* **appname**: the name of the app folder you want to zip up.
-* **devname**: the name to use for this snapshot. Best to use either the bugzilla
-  bug ID or branch name.
+* **ath/to/application.zip**: the path to the application.zip file that is in
+the **profile/webapps** directory
+* **devname**: the name to use for this snapshot. Best to use either the
+bugzilla bug ID or branch name.
 
 For example: a snapshot of the email app that changes the background of the
 app to red, and is tracked in bug 12345:
 
-    gaia-dev-zip email bug12345-redbg
+    gaia-dev-zip profile/webapps/email.gaiamobile.org/application.zip bug12345-redbg
 
 When the tool is done, there will be a **bug12345-redbg.zip** folder in the
-apps directory. Upload this somewhere and give the UX person a link to that
+current directory. Upload this somewhere and give the UX person a link to that
 zip file.
 
 ## For the UX person
