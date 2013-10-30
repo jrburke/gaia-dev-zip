@@ -68,9 +68,9 @@ the deprecated instructions at the end of this document.
 
 1) **On your desktop**: Firefox 26 or later. You may need to download
 [Firefox Aurora](http://www.mozilla.org/en-US/firefox/aurora/) to get it.
-The main point is to get a Firefox version with the App Manager. Click this
-[about:app-manager](about:app-manager) link to see if you have it in your
-desktop browser.
+The main point is to get a Firefox version with the App Manager. Go to
+**about:app-manager** in the browser's location bar to see if you have
+it in your desktop browser.
 
 Read the [Using the App Manager](https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS/Using_the_App_Manager) page to do the rest of the
 setup. In particular, make sure you:
