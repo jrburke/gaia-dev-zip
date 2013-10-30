@@ -61,6 +61,56 @@ zip file.
 
 ## For the UX person
 
+These instructions are for Gaia 1.2 and later. For Gaia 1.1 and before, see
+the deprecated instructions at the end of this document.
+
+### Prerequisites
+
+1) **On your desktop**: Firefox 26 or later. You may need to download
+[Firefox Aurora](http://www.mozilla.org/en-US/firefox/aurora/) to get it.
+The main point is to get a Firefox version with the App Manager. Click this
+[about:app-manager](about:app-manager) link to see if you have it in your
+desktop browser.
+
+Read the [Using the App Manager](https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS/Using_the_App_Manager) page to do the rest of the
+setup. In particular, make sure you:
+
+* Use the [ADB helper add-on](https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS/Using_the_App_Manager#Adb_Helper_Add-on)
+* Do the
+[Debugging Certified Apps](https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS/Using_the_App_Manager#Debugging_Certified_Apps)
+steps. Gaia apps are usually certified apps.
+
+**Note**: If you flash Gaia, you will likely need to do the
+[Debugging Certified Apps](https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS/Using_the_App_Manager#Debugging_Certified_Apps)
+again. That preference is reset which each Gaia flash.
+
+### Installing a dev snapshot of an app
+
+1) The developer gives you an URL to a .zip file for the app.
+
+2) Use your **desktop Firefox** to navigate to the zip file. Choose to save
+the file to your desktop.
+
+![download zip](https://raw.github.com/jrburke/gaia-dev-zip/master/images/download-zip.png)
+
+3) Open the folder on your desktop that has the downloaded zip file.
+
+![show downloads](https://raw.github.com/jrburke/gaia-dev-zip/master/images/show-downloads.png)
+
+4) Double-click on the .zip file to unzip it. This should create a directory
+in your downloads folder.
+
+![unzipped dir](https://raw.github.com/jrburke/gaia-dev-zip/master/images/unzipped-dir.png)
+
+5) In the [App Manager](about:app-manager), be sure you are in the **Apps** section of the UI, and click the **Add Packaged App** link. Find the directory you just unzipped from the zip file.
+
+6) Click the **Update** button in the App Manager UI to push the app over to your device (assuming you have already connected to the device via USB cable and the App Manager shows *Connected to B2G* in the lower left).
+
+## For the UX person (Gaia 1.1 and lower)
+
+**This section is deprecated**, see the other UX section for how to work with
+Gaia 1.2+.
+
 ### Prerequisites
 
 1) Make sure in your **desktop Firefox**, you have installed the
@@ -102,8 +152,6 @@ items at:
 
     Tools -> Web Developer -> Firefox OS Simulator
 
-
-
 6) In the Simulator, click the **Add Directory** button, and find the folder
 you unzipped in your downloads folder, and select the **manifest.webapp** file
 inside that folder.
@@ -128,22 +176,6 @@ phone.
 
 Select OK. If you do not select OK in time, the Simulator tab will show a
 "timeout" error. If that happens, just try again.
-
-### Cleanup
-
-On phone:
-
-* long tap on the application icon, to bring up the delete UI, delete it.
-
-On desktop:
-
-* In the Simulator tab, you can click the X button to remove it from the
-simulator. Refresh the tab to get rid of the entry.
-
-* You can now delete the .zip file and unzipped directory from your download
-folder.
-
-
 
 
 
