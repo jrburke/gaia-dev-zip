@@ -75,7 +75,6 @@ it in your desktop browser.
 Read the [Using the App Manager](https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS/Using_the_App_Manager) page to do the rest of the
 setup. In particular, make sure you:
 
-* Turn on Dev Tools access on the phone. In the phone's **Settings** app, go to the **Developer** option, near the very bottom of the list. Then in that settings area, the **Debugging via USB** option should be set to "ADB and DevTools".
 * Use the [ADB helper add-on](https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS/Using_the_App_Manager#Adb_Helper_Add-on)
 * Do the
 [Debugging Certified Apps](https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS/Using_the_App_Manager#Debugging_Certified_Apps)
@@ -84,6 +83,8 @@ steps. Gaia apps are usually certified apps.
 **Note**: If you flash Gaia, you will likely need to do the
 [Debugging Certified Apps](https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS/Using_the_App_Manager#Debugging_Certified_Apps)
 again. That preference is reset which each Gaia flash.
+
+2) **On your phone**: Turn on Dev Tools access on the phone. In the phone's **Settings** app, go to the **Developer** option, near the very bottom of the list. Then in that settings area, the **Debugging via USB** option should be set to "ADB and DevTools"
 
 ### Installing a dev snapshot of an app
 
