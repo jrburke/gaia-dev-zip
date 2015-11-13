@@ -66,6 +66,10 @@ function main(args) {
       manifest.name = devName;
       manifest.description = devName;
 
+      // Delete stuff injected by manifest that messes things up.
+      delete manifest.origin;
+      delete manifest.version;
+
       // And names in locale-specific info
       locales = manifest.locales;
       if (locales) {
